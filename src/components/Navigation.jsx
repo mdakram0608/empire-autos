@@ -1,4 +1,5 @@
 import { useState, useEffect } from 'react';
+import { Link } from 'react-router-dom';
 import './Navigation.css';
 
 const Navigation = () => {
@@ -42,12 +43,12 @@ const Navigation = () => {
 
           {/* CTA Button */}
           <div className="nav-actions">
-            <a href="#sell-car" className="btn btn-primary">
+            <Link to="/sell-car" className="btn btn-primary">
               Sell Your Car
-            </a>
-            
+            </Link>
+
             {/* Mobile Menu Toggle */}
-            <button 
+            <button
               className="mobile-menu-toggle"
               onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
               aria-label="Toggle menu"
@@ -64,7 +65,7 @@ const Navigation = () => {
           <ul>
             {menuItems.map((item) => (
               <li key={item.name}>
-                <a 
+                <a
                   href={item.href}
                   onClick={() => setMobileMenuOpen(false)}
                 >
@@ -73,13 +74,13 @@ const Navigation = () => {
               </li>
             ))}
             <li>
-              <a 
-                href="#sell-car" 
+              <Link
+                to="/sell-car"
                 className="mobile-cta"
                 onClick={() => setMobileMenuOpen(false)}
               >
                 Sell Your Car
-              </a>
+              </Link>
             </li>
           </ul>
         </div>
