@@ -5,12 +5,12 @@
   /* Ultra-Premium Color Palette */
   --color-primary: #1a1a1a;
   /* Rich Black */
-  --color-secondary: #C9A961;
-  /* Imperial Gold */
-  --color-accent: #8B7355;
-  /* Bronze */
-  --color-highlight: #D4AF37;
-  /* Bright Gold */
+  --color-secondary: #DC143C;
+  /* Crimson Red */
+  --color-accent: #B22222;
+  /* Firebrick Red */
+  --color-highlight: #FF4500;
+  /* Bright Red */
 
   --color-bg-darker: #000000;
   --color-bg-dark: #0d0d0d;
@@ -21,11 +21,11 @@
   --color-text-primary: #FFFFFF;
   --color-text-secondary: #E5E5E5;
   --color-text-muted: #999999;
-  --color-text-gold: #C9A961;
+  --color-text-red: #DC143C;
 
   --color-border: #2d2d2d;
   --color-border-light: #3d3d3d;
-  --color-border-gold: rgba(201, 169, 97, 0.3);
+  --color-border-red: rgba(220, 20, 60, 0.3);
 
   /* Premium Typography */
   --font-display: 'Cormorant Garamond', serif;
@@ -51,8 +51,8 @@
   --shadow-sm: 0 2px 12px rgba(0, 0, 0, 0.6);
   --shadow-md: 0 4px 24px rgba(0, 0, 0, 0.7);
   --shadow-lg: 0 8px 40px rgba(0, 0, 0, 0.8);
-  --shadow-gold: 0 0 30px rgba(201, 169, 97, 0.15);
-  --shadow-gold-strong: 0 0 40px rgba(201, 169, 97, 0.3);
+  --shadow-red: 0 0 30px rgba(220, 20, 60, 0.15);
+  --shadow-red-strong: 0 0 40px rgba(220, 20, 60, 0.3);
 
   /* Transitions */
   --transition-fast: 0.2s cubic-bezier(0.4, 0, 0.2, 1);
@@ -159,26 +159,26 @@ p {
 
 .btn-primary {
   background: linear-gradient(135deg, var(--color-secondary) 0%, var(--color-highlight) 100%);
-  color: var(--color-bg-darker);
-  box-shadow: var(--shadow-gold);
+  color: #FFFFFF;
+  box-shadow: var(--shadow-red);
   border: 1px solid var(--color-secondary);
 }
 
 .btn-primary:hover {
-  box-shadow: var(--shadow-gold-strong);
+  box-shadow: var(--shadow-red-strong);
   transform: translateY(-2px);
 }
 
 .btn-secondary {
   background: transparent;
-  color: var(--color-text-gold);
+  color: var(--color-text-red);
   border: 2px solid var(--color-secondary);
 }
 
 .btn-secondary:hover {
   background: var(--color-secondary);
-  color: var(--color-bg-darker);
-  box-shadow: var(--shadow-gold);
+  color: #FFFFFF;
+  box-shadow: var(--shadow-red);
 }
 
 /* Container */
@@ -196,8 +196,8 @@ p {
   background-clip: text;
 }
 
-.text-gold {
-  color: var(--color-text-gold);
+.text-red {
+  color: var(--color-text-red);
 }
 
 .text-center {
@@ -319,7 +319,7 @@ p {
   background: rgba(26, 26, 26, 0.7);
   backdrop-filter: blur(20px);
   -webkit-backdrop-filter: blur(20px);
-  border: 1px solid rgba(201, 169, 97, 0.1);
+  border: 1px solid rgba(220, 20, 60, 0.1);
 }
 
 /* Premium Card */
@@ -370,7 +370,7 @@ p {
 }
 
 /* Decorative Elements */
-.gold-accent {
+.red-accent {
   width: 60px;
   height: 2px;
   background: linear-gradient(90deg, var(--color-secondary), var(--color-highlight));
