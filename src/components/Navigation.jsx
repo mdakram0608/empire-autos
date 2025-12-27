@@ -16,8 +16,8 @@ const Navigation = () => {
   }, []);
 
   const menuItems = [
-    { name: 'Home', href: '#home' },
-    { name: 'Car Collection', href: '#collection' },
+    { name: 'Home', href: '/', isRoute: true },
+    { name: 'Car Collection', href: '/collection', isRoute: true },
     { name: 'About Us', href: '#about' },
     { name: 'Stores', href: '#stores' },
     { name: 'Contact', href: '#contact' },
@@ -36,7 +36,11 @@ const Navigation = () => {
           <ul className="nav-menu desktop-menu">
             {menuItems.map((item) => (
               <li key={item.name}>
-                <a href={item.href}>{item.name}</a>
+                {item.isRoute ? (
+                  <Link to={item.href}>{item.name}</Link>
+                ) : (
+                  <a href={item.href}>{item.name}</a>
+                )}
               </li>
             ))}
           </ul>
@@ -65,12 +69,21 @@ const Navigation = () => {
           <ul>
             {menuItems.map((item) => (
               <li key={item.name}>
-                <a
-                  href={item.href}
-                  onClick={() => setMobileMenuOpen(false)}
-                >
-                  {item.name}
-                </a>
+                {item.isRoute ? (
+                  <Link
+                    to={item.href}
+                    onClick={() => setMobileMenuOpen(false)}
+                  >
+                    {item.name}
+                  </Link>
+                ) : (
+                  <a
+                    href={item.href}
+                    onClick={() => setMobileMenuOpen(false)}
+                  >
+                    {item.name}
+                  </a>
+                )}
               </li>
             ))}
             <li>

@@ -1,3 +1,4 @@
+import { Link } from 'react-router-dom';
 import './FeaturedCars.css';
 
 const FeaturedCars = () => {
@@ -132,9 +133,9 @@ const FeaturedCars = () => {
                 </div>
 
                 <div className="view-all-wrapper">
-                    <a href="#all-cars" className="btn btn-secondary">
+                    <Link to="/collection" className="btn btn-secondary">
                         View All Cars
-                    </a>
+                    </Link>
                 </div>
             </div>
         </section>

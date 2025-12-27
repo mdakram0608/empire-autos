@@ -14,7 +14,7 @@ const Hero = () => {
         // Start logo animation after car animation completes
         const logoTimer = setTimeout(() => {
             setLogoVisible(true);
-        }, 2800); // Car animation duration + buffer
+        }, 1500); // Car animation duration + buffer
 
         return () => {
             clearTimeout(carTimer);
